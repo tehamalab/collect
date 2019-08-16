@@ -9,7 +9,7 @@ the specific language governing permissions and limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.odk.collect.android">
+    package="com.tehamalab.collect.android">
 
     <uses-feature
         android:name="android.hardware.location"
@@ -81,7 +81,7 @@ the specific language governing permissions and limitations under the License.
         android:xlargeScreens="true" />
 
     <application
-        android:name=".application.Collect"
+        android:name="com.tehamalab.collect.android.application.Collect"
         android:icon="@drawable/notes"
         android:installLocation="auto"
         android:label="@string/app_name"
@@ -99,64 +99,64 @@ the specific language governing permissions and limitations under the License.
         </provider>
 
         <activity
-            android:name=".activities.MainMenuActivity"
+            android:name="com.tehamalab.collect.android.activities.MainMenuActivity"
             android:configChanges="locale|orientation|screenSize" />
         <activity
-            android:name=".activities.ScannerWithFlashlightActivity"
+            android:name="com.tehamalab.collect.android.activities.ScannerWithFlashlightActivity"
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".activities.FormEntryActivity"
+            android:name="com.tehamalab.collect.android.activities.FormEntryActivity"
             android:configChanges="orientation"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".activities.NotificationActivity"
+            android:name="com.tehamalab.collect.android.activities.NotificationActivity"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:taskAffinity=""
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
         <activity
-            android:name=".activities.DrawActivity"
+            android:name="com.tehamalab.collect.android.activities.DrawActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".activities.GoogleDriveActivity"
+            android:name="com.tehamalab.collect.android.activities.GoogleDriveActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".activities.InstanceChooserList" />
-        <activity android:name=".activities.FormChooserList" />
-        <activity android:name=".activities.FormDownloadList" />
+        <activity android:name="com.tehamalab.collect.android.activities.InstanceChooserList" />
+        <activity android:name="com.tehamalab.collect.android.activities.FormChooserList" />
+        <activity android:name="com.tehamalab.collect.android.activities.FormDownloadList" />
         <activity
-            android:name=".activities.FileManagerTabs"
+            android:name="com.tehamalab.collect.android.activities.FileManagerTabs"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name=".activities.GoogleSheetsUploaderActivity"
+            android:name="com.tehamalab.collect.android.activities.GoogleSheetsUploaderActivity"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name=".activities.InstanceUploaderListActivity"
+            android:name="com.tehamalab.collect.android.activities.InstanceUploaderListActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name=".activities.InstanceUploaderActivity" />
-        <activity android:name=".activities.AboutActivity" />
-        <activity android:name=".preferences.PreferencesActivity" />
-        <activity android:name=".preferences.AdminPreferencesActivity" />
-        <activity android:name=".activities.FormHierarchyActivity" />
-        <activity android:name=".activities.ViewOnlyFormHierarchyActivity" />
-        <activity android:name=".activities.GeoPointActivity" />
+        <activity android:name="com.tehamalab.collect.android.activities.InstanceUploaderActivity" />
+        <activity android:name="com.tehamalab.collect.android.activities.AboutActivity" />
+        <activity android:name="com.tehamalab.collect.android.preferences.PreferencesActivity" />
+        <activity android:name="com.tehamalab.collect.android.preferences.AdminPreferencesActivity" />
+        <activity android:name="com.tehamalab.collect.android.activities.FormHierarchyActivity" />
+        <activity android:name="com.tehamalab.collect.android.activities.ViewOnlyFormHierarchyActivity" />
+        <activity android:name="com.tehamalab.collect.android.activities.GeoPointActivity" />
         <activity
-            android:name=".activities.GeoPointMapActivity"
+            android:name="com.tehamalab.collect.android.activities.GeoPointMapActivity"
             android:configChanges="orientation" />
         <activity
-            android:name=".activities.GeoPolyActivity"
+            android:name="com.tehamalab.collect.android.activities.GeoPolyActivity"
             android:configChanges="orientation" />
-        <activity android:name=".activities.BearingActivity" />
+        <activity android:name="com.tehamalab.collect.android.activities.BearingActivity" />
         <activity
-            android:name=".activities.SplashScreenActivity"
+            android:name="com.tehamalab.collect.android.activities.SplashScreenActivity"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".activities.CaptureSelfieActivity" />
-        <activity android:name=".activities.CaptureSelfieActivityNewApi" />
-        <activity android:name=".activities.WebViewActivity" />
-        <activity android:name=".activities.CaptureSelfieVideoActivity" />
-        <activity android:name=".activities.CaptureSelfieVideoActivityNewApi" />
+        <activity android:name="com.tehamalab.collect.android.activities.CaptureSelfieActivity" />
+        <activity android:name="com.tehamalab.collect.android.activities.CaptureSelfieActivityNewApi" />
+        <activity android:name="com.tehamalab.collect.android.activities.WebViewActivity" />
+        <activity android:name="com.tehamalab.collect.android.activities.CaptureSelfieVideoActivity" />
+        <activity android:name="com.tehamalab.collect.android.activities.CaptureSelfieVideoActivityNewApi" />
 
         <!--
         Register AnalyticsReceiver and AnalyticsService to support background
@@ -207,17 +207,17 @@ the specific language governing permissions and limitations under the License.
          -->
 
         <provider
-            android:name=".provider.FormsProvider"
-            android:authorities="org.odk.collect.android.provider.odk.forms"
+            android:name="com.tehamalab.collect.android.provider.FormsProvider"
+            android:authorities="com.tehamalab.collect.android.provider.odk.forms"
             android:exported="true" />
         <provider
-            android:name=".provider.InstanceProvider"
-            android:authorities="org.odk.collect.android.provider.odk.instances"
+            android:name="com.tehamalab.collect.android.provider.InstanceProvider"
+            android:authorities="com.tehamalab.collect.android.provider.odk.instances"
             android:exported="true" />
 
         <activity-alias
             android:name=".activities.FormEntryActivity"
-            android:targetActivity=".activities.FormEntryActivity">
+            android:targetActivity="com.tehamalab.collect.android.activities.FormEntryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
@@ -231,7 +231,7 @@ the specific language governing permissions and limitations under the License.
 
         <activity-alias
             android:name=".activities.InstanceChooserList"
-            android:targetActivity=".activities.InstanceChooserList">
+            android:targetActivity="com.tehamalab.collect.android.activities.InstanceChooserList">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
@@ -244,7 +244,7 @@ the specific language governing permissions and limitations under the License.
 
         <activity-alias
             android:name=".activities.FormChooserList"
-            android:targetActivity=".activities.FormChooserList">
+            android:targetActivity="com.tehamalab.collect.android.activities.FormChooserList">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
@@ -258,9 +258,9 @@ the specific language governing permissions and limitations under the License.
 
         <activity-alias
             android:name=".activities.FormDownloadList"
-            android:targetActivity=".activities.FormDownloadList">
+            android:targetActivity="com.tehamalab.collect.android.activities.FormDownloadList">
             <intent-filter>
-                <action android:name="org.odk.collect.android.FORM_DOWNLOAD" />
+                <action android:name="com.tehamalab.collect.android.FORM_DOWNLOAD" />
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="vnd.android.cursor.dir/vnd.odk.form" />
             </intent-filter>
@@ -268,7 +268,7 @@ the specific language governing permissions and limitations under the License.
 
         <activity-alias
             android:name=".activities.InstanceUploaderList"
-            android:targetActivity=".activities.InstanceUploaderListActivity" >
+            android:targetActivity="com.tehamalab.collect.android.activities.InstanceUploaderListActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
@@ -279,9 +279,9 @@ the specific language governing permissions and limitations under the License.
 
         <activity-alias
             android:name=".activities.InstanceUploaderActivity"
-            android:targetActivity=".activities.InstanceUploaderActivity">
+            android:targetActivity="com.tehamalab.collect.android.activities.InstanceUploaderActivity">
             <intent-filter>
-                <action android:name="org.odk.collect.android.INSTANCE_UPLOAD" />
+                <action android:name="com.tehamalab.collect.android.INSTANCE_UPLOAD" />
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="vnd.android.cursor.dir/vnd.odk.instance" />
             </intent-filter>
@@ -289,7 +289,7 @@ the specific language governing permissions and limitations under the License.
 
         <activity-alias
             android:name=".activities.SplashScreenActivity"
-            android:targetActivity=".activities.SplashScreenActivity">
+            android:targetActivity="com.tehamalab.collect.android.activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -300,7 +300,7 @@ the specific language governing permissions and limitations under the License.
 
         <!-- Enable Shortcuts for Command Actions -->
         <activity
-            android:name=".activities.AndroidShortcuts"
+            android:name="com.tehamalab.collect.android.activities.AndroidShortcuts"
             android:label="ODK Form"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
